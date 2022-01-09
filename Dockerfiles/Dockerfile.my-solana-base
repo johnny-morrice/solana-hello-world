@@ -5,5 +5,5 @@ RUN apt-get -y install curl wget
 RUN wget https://nodejs.org/download/release/v14.18.2/node-v14.18.2-linux-x64.tar.gz
 RUN tar xf node-v14.18.2-linux-x64.tar.gz
 ENV PATH="/app/node-v14.18.2-linux-x64/bin:${PATH}"
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN sh -c "$(curl -sSfL https://release.solana.com/v1.9.4/install)"
