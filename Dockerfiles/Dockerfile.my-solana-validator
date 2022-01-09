@@ -1,0 +1,3 @@
+FROM my-solana-base:latest
+RUN solana config set --url localhost
+ENTRYPOINT [ "solana-test-validator" ]

@@ -1,10 +1,9 @@
 FROM my-solana-base:latest
-RUN solana config set --url localhost
+RUN solana config set --url my-solana-validator
 RUN solana-keygen new
 COPY example-helloworld /app/example-helloworld
 WORKDIR /app/example-helloworld
 RUN npm install
 RUN npm run build:program-rust
 RUN npm run build:program-c
-RUN solana program deploy dist/program/helloworld.so
 ENTRYPOINT [ "script/solana-wrapper.sh" ]

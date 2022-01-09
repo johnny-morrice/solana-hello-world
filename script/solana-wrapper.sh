@@ -1,4 +1,4 @@
 #/bin/bash
 set -e
-solana-test-validator &
+solana program deploy dist/program/helloworld.so
 npm run start
