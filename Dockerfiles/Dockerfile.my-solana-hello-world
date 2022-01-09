@@ -1,5 +1,5 @@
 FROM my-solana-base:latest
-RUN solana config set --url my-solana-validator
+RUN solana config set --url http://my-solana-validator:8899
 RUN solana-keygen new
 COPY example-helloworld /app/example-helloworld
 WORKDIR /app/example-helloworld
