@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -x
 set -e
-docker pull postgres:13.3-alpine
-docker pull rabbitmq:3.8.19-alpine
+# docker pull node:14-alpine
+# docker pull rust:1.57-slim-buster
