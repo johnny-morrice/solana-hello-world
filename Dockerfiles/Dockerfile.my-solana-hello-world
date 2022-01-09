@@ -1,4 +1,6 @@
 FROM my-solana-base:latest
+RUN pwd
+RUN ls
 RUN solana config set --url localhost
 RUN solana-keygen new
 RUN solana-test-validator
