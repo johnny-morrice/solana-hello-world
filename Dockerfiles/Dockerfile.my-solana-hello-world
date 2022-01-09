@@ -7,4 +7,4 @@ RUN npm install
 RUN npm run build:program-rust
 RUN npm run build:program-c
 COPY script /app/example-helloworld/script
-ENTRYPOINT [ "script/solana-wrapper.sh" ]
+ENTRYPOINT [ "/app/example-helloworld/script/solana-wrapper.sh" ]
