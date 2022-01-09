@@ -18,7 +18,6 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 10240
     vb.cpus = 8
-    vb.name = "solana-hello-world"
     vb.linked_clone = true
     vb.default_nic_type = "virtio"
   end
