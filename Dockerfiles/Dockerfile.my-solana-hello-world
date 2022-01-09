@@ -3,8 +3,8 @@ RUN solana config set --url http://my-solana-validator:8899
 RUN solana-keygen new
 COPY example-helloworld /app/example-helloworld
 WORKDIR /app/example-helloworld
-COPY script /app/example-helloworld/script
 RUN npm install
 RUN npm run build:program-rust
 RUN npm run build:program-c
+COPY script /app/example-helloworld/script
 ENTRYPOINT [ "script/solana-wrapper.sh" ]
