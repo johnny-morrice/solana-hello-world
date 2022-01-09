@@ -4,5 +4,5 @@ set -e
 PAT=$(cat github.pat)
 git config --global user.email "$GIT_USER_EMAIL"
 git config --global user.name "$GIT_USER_NAME"
-git clone "https://${GITHUB_USERNAME}:${PAT}@github.com/johnny-morrice/solana-hello-world.git"
+git clone --recurse-submodules "https://${GITHUB_USERNAME}:${PAT}@github.com/johnny-morrice/solana-hello-world.git"
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
