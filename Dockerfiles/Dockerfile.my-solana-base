@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 WORKDIR /app
 RUN apt-get update
-RUN apt-get -y install curl wget build-essentials
+RUN apt-get -y install curl wget build-essential
 RUN wget https://nodejs.org/download/release/v14.18.2/node-v14.18.2-linux-x64.tar.gz
 RUN tar xf node-v14.18.2-linux-x64.tar.gz
 ENV PATH="/app/node-v14.18.2-linux-x64/bin:${PATH}"
