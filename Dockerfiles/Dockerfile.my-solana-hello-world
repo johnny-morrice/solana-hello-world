@@ -1,6 +1,7 @@
 FROM my-solana-base:latest
 RUN solana config set --url localhost
 RUN solana-keygen new
+RUN ls
 COPY example-helloworld /app/
 WORKDIR /app/example-helloworld
 RUN npm install
